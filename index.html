@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Appliance Hub | Smart Appliance Picks & Buying Guides</title>
+    <meta name="description" content="Discover smart appliances, kitchen gadgets, cleaning products, home appliances, and useful buying guides at Easy Appliance Hub. Find products worth considering on Amazon.">
+    <meta name="keywords" content="best appliances, Amazon appliances, kitchen appliances, home appliances, smart home appliances, cleaning appliances, best kitchen gadgets, Amazon home finds, appliance buying guides">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="preload" href="favicon.png" as="image" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+<style>
+:root{
+  --bg:#090414;
+  --bg2:#120723;
+  --purple:#8b5cf6;
+  --violet:#a855f7;
+  --pink:#d946ef;
+  --text:#f8f7ff;
+  --muted:#c7bddb;
+  --card:rgba(255,255,255,.07);
+  --border:rgba(196,160,255,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Open Sans',sans-serif;color:var(--text);
+  background:
+    radial-gradient(circle at 10% 10%,rgba(139,92,246,.25),transparent 28%),
+    radial-gradient(circle at 90% 20%,rgba(217,70,239,.18),transparent 25%),
+    linear-gradient(135deg,var(--bg),var(--bg2) 55%,#08030f);
+  line-height:1.6;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:-30%;z-index:-1;pointer-events:none;
+  background:conic-gradient(from 0deg,transparent 0 30%,rgba(139,92,246,.08),transparent 45% 70%,rgba(217,70,239,.06),transparent 85%);
+  animation:spin 22s linear infinite;will-change:transform;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-10px,0)}}
+@keyframes glow{0%,100%{box-shadow:0 0 18px rgba(139,92,246,.15)}50%{box-shadow:0 0 38px rgba(168,85,247,.35)}}
+@keyframes rise{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:#fff;margin-bottom:15px}
+a{color:#e9ddff;text-decoration:none;transition:color .25s ease,transform .25s ease}
+a:hover{color:#fff}
+ul{list-style:none}.container{max-width:1200px;margin:auto;padding:0 20px}
+.navbar{
+  background:rgba(9,4,20,.72);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000
+}
+.nav-container{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:1200px;margin:auto;gap:20px}
+.logo{font-family:'Montserrat';font-size:24px;font-weight:800;color:#fff;text-shadow:0 0 20px rgba(168,85,247,.6);flex-shrink:0}
+.nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex:1;justify-content:center}
+.nav-links a{font-weight:700}
+.nav-actions{display:flex;gap:10px;align-items:center;flex-shrink:0}
+.hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(9,4,20,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);padding:20px;z-index:999;flex-direction:column;gap:16px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-weight:700;font-size:1.1rem;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.btn{
+  display:inline-block;padding:12px 22px;border-radius:12px;font-weight:800;text-align:center;
+  cursor:pointer;border:1px solid var(--border);transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+  will-change:transform
+}
+.btn:hover{transform:translate3d(0,-3px,0)}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:white;border:0;box-shadow:0 8px 30px rgba(139,92,246,.3)}
+.btn-primary:hover{color:#fff;box-shadow:0 12px 40px rgba(168,85,247,.5)}
+.btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(196,160,255,.35)}
+.hero{
+  position:relative;text-align:center;padding:125px 20px 105px;
+  background:radial-gradient(circle at 50% 35%,rgba(139,92,246,.27),transparent 45%);
+  animation:rise .7s ease both
+}
+.hero::after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(168,85,247,.15);filter:blur(60px);top:15%;left:50%;
+  transform:translateX(-50%);z-index:-1
+}
+.hero h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.05;text-shadow:0 0 30px rgba(168,85,247,.35)}
+.hero p{font-size:1.15rem;max-width:700px;margin:0 auto 28px;color:var(--muted)}
+.hero .btn-group{display:flex;justify-content:center;gap:14px;margin-bottom:28px}
+.hero-disclosure{font-size:.8rem!important;color:#a99cba!important}
+section{padding:80px 0}.section-header{text-align:center;margin-bottom:45px}
+.section-header p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{
+  background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+  border:1px solid var(--border);padding:28px;border-radius:20px;
+  box-shadow:0 12px 45px rgba(0,0,0,.22);backdrop-filter:blur(12px);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+  animation:rise .7s ease both;will-change:transform
+}
+.card:hover{transform:translate3d(0,-8px,0);border-color:rgba(168,85,247,.55);box-shadow:0 18px 55px rgba(91,33,182,.25)}
+.card h3,.card h4{color:#fff}.card p{color:var(--muted);margin-bottom:18px}
+#top-picks{background:rgba(255,255,255,.025)!important;border:1px solid var(--border);border-radius:24px}
+.product-card{display:flex;flex-direction:column}
+.product-img-wrap{
+  width:100%;height:200px;display:flex;align-items:center;justify-content:center;
+  background:#f8f7fc;
+  border-radius:14px;margin-bottom:16px;overflow:hidden;position:relative;
+  border:1px solid rgba(139,92,246,.15)
+}
+.product-img-wrap img{
+  max-width:90%;max-height:90%;width:auto;height:auto;object-fit:contain;display:block
+}
+.product-img-wrap .product-initial{
+  font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:800;
+  color:rgba(139,92,246,.35);letter-spacing:-1px;
+  width:100%;height:100%;display:none;align-items:center;justify-content:center
+}
+.product-card .price{font-size:1.25rem;font-weight:800;color:#d946ef;margin-bottom:6px}
+.product-card .rating{font-size:.9rem;color:#fbbf24;margin-bottom:10px;font-weight:600}
+.product-card .why{font-size:.88rem;color:var(--muted);margin-bottom:14px;line-height:1.5;border-left:3px solid var(--purple);padding-left:12px}
+.price-note{font-size:.75rem;color:#a99cba;margin-top:8px;text-align:center}
+.category-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:35px}
+.cat-tab{
+  padding:10px 20px;border-radius:999px;border:1px solid var(--border);
+  background:rgba(255,255,255,.05);color:var(--muted);font-weight:700;cursor:pointer;
+  transition:all .22s ease
+}
+.cat-tab:hover,.cat-tab.active{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;border-color:transparent}
+.product-card.hidden{display:none}
+.compare-table-wrap{overflow-x:auto;margin-top:20px}
+.compare-table{width:100%;border-collapse:collapse;min-width:600px}
+.compare-table th,.compare-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.compare-table th{background:rgba(139,92,246,.2);font-family:'Montserrat',sans-serif;font-weight:700;color:#fff}
+.compare-table td{color:var(--muted)}
+.compare-table tr:hover td{background:rgba(255,255,255,.04)}
+.faq-item{margin-bottom:16px;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;padding:18px 22px;background:rgba(255,255,255,.05);
+  border:0;color:#fff;font-weight:700;font-size:1rem;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;font-family:inherit
+}
+.faq-q:hover{background:rgba(255,255,255,.08)}
+.faq-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;color:var(--muted)}
+.faq-item.open .faq-a{padding:0 22px 18px;max-height:300px}
+.faq-icon{transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:20px}
+.trust-item{text-align:center;padding:24px}
+.trust-item .num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:var(--pink);margin-bottom:8px}
+.pinterest-section{
+  background:linear-gradient(135deg,rgba(109,40,217,.8),rgba(126,34,206,.55));
+  text-align:center;border-block:1px solid var(--border)
+}
+.pinterest-section h2{color:#fff}.pin-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:28px 0}
+.pin-list li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:10px 18px;border-radius:999px;font-weight:700}
+.split-section{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.newsletter-box{
+  background:var(--card);border:1px solid var(--border);padding:35px;border-radius:20px;
+  box-shadow:0 15px 50px rgba(0,0,0,.2);animation:glow 4s ease-in-out infinite
+}
+.newsletter-form{display:flex;margin-top:20px}.newsletter-form input{
+  flex:1;padding:13px 15px;border:1px solid var(--border);background:rgba(0,0,0,.25);color:#fff;border-radius:12px 0 0 12px;font-family:inherit;outline:none
+}.newsletter-form input:focus{border-color:var(--purple)}
+.newsletter-form button{border-radius:0 12px 12px 0}
+footer{background:#05020b;color:#fff;padding:50px 20px 20px;border-top:1px solid var(--border)}
+footer h2,footer h3,footer a{color:#fff}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1200px;margin:0 auto 40px}
+.footer-links li{margin-bottom:10px}.footer-bottom{text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:.9rem;color:#9c91ab}
+.account-btn{font-size:.9rem;padding:10px 15px}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(4,1,10,.78);backdrop-filter:blur(10px);z-index:3000;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.account-modal,.page-modal{
+  width:min(480px,100%);background:linear-gradient(145deg,#1b0d31,#0e0619);
+  border:1px solid rgba(168,85,247,.4);border-radius:24px;padding:30px;
+  box-shadow:0 30px 100px rgba(0,0,0,.55);animation:rise .25s ease both;max-height:90vh;overflow-y:auto
+}
+.page-modal{width:min(640px,100%)}
+.auth-tabs{display:flex;gap:8px;background:rgba(255,255,255,.05);padding:5px;border-radius:12px;margin:8px 0 24px}
+.auth-tab{flex:1;border:0;background:transparent;color:#b9a8cc;padding:10px;border-radius:9px;font-weight:800;cursor:pointer}
+.auth-tab.active{background:linear-gradient(135deg,#8b5cf6,#d946ef);color:#fff;box-shadow:0 5px 18px rgba(139,92,246,.25)}
+.account-modal h2,.page-modal h2{text-align:center}.account-modal p,.page-modal p{color:var(--muted);font-size:.95rem;margin-bottom:12px}
+.account-modal input{
+  width:100%;margin-top:12px;padding:13px 15px;border-radius:11px;border:1px solid var(--border);
+  background:rgba(255,255,255,.06);color:#fff;outline:none
+}
+.account-modal input:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(139,92,246,.12)}
+.account-modal .modal-submit{width:100%;margin-top:15px}.account-switch{text-align:center;margin-top:16px;color:#cbbbe0}
+.close-modal{float:right;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}
+.auth-message{text-align:center;margin-top:10px;min-height:22px;color:#d8c4ff}
+.disclaimer-bar{
+  background:rgba(139,92,246,.12);border:1px solid var(--border);border-radius:12px;
+  padding:12px 18px;text-align:center;font-size:.85rem;color:var(--muted);margin-bottom:30px
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero{padding:90px 20px}.hero .btn-group{flex-direction:column}
+  .split-section{grid-template-columns:1fr}.nav-container{gap:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
+}
+
+/* ========== POSO CHATBOT ========== */
+.poso-launcher{
+  position:fixed;bottom:24px;right:24px;z-index:9999;
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(145deg,#1a1a1a 0%,#0d0d0d 100%);
+  border:2px solid #d4af37;
+  box-shadow:0 0 20px rgba(212,175,55,.45),0 8px 24px rgba(0,0,0,.5);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:transform .25s ease,box-shadow .25s ease;
+  animation:poso-pulse 2.5s ease-in-out infinite;
+}
+.poso-launcher:hover{transform:scale(1.08);box-shadow:0 0 28px rgba(212,175,55,.65),0 10px 28px rgba(0,0,0,.55)}
+.poso-launcher svg{width:30px;height:30px;fill:#d4af37}
+.poso-launcher .poso-badge{
+  position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:50%;
+  background:#d4af37;color:#0d0d0d;font-size:10px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:2px solid #0d0d0d;
+}
+@keyframes poso-pulse{
+  0%,100%{box-shadow:0 0 16px rgba(212,175,55,.4),0 8px 24px rgba(0,0,0,.5)}
+  50%{box-shadow:0 0 28px rgba(212,175,55,.7),0 8px 24px rgba(0,0,0,.5)}
+}
+.poso-window{
+  position:fixed;bottom:100px;right:24px;z-index:9998;
+  width:min(380px,calc(100vw - 32px));height:min(520px,calc(100vh - 140px));
+  background:#0d0d0d;border:1px solid #d4af37;
+  border-radius:20px;display:none;flex-direction:column;
+  box-shadow:0 0 40px rgba(212,175,55,.25),0 20px 50px rgba(0,0,0,.7);
+  overflow:hidden;font-family:'Inter',system-ui,sans-serif;
+  animation:poso-slide-up .3s ease;
+}
+.poso-window.open{display:flex}
+@keyframes poso-slide-up{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.poso-header{
+  background:linear-gradient(135deg,#1a1a1a,#111);
+  border-bottom:1px solid rgba(212,175,55,.35);
+  padding:14px 16px;display:flex;align-items:center;gap:12px;
+}
+.poso-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(145deg,#d4af37,#b8860b);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#0d0d0d;font-size:1.1rem;
+  box-shadow:0 0 12px rgba(212,175,55,.5);
+  animation:poso-glow 2s ease-in-out infinite;
+}
+@keyframes poso-glow{
+  0%,100%{box-shadow:0 0 10px rgba(212,175,55,.4)}
+  50%{box-shadow:0 0 18px rgba(212,175,55,.8)}
+}
+.poso-header-info{flex:1}
+.poso-header-info h4{margin:0;color:#d4af37;font-size:1.05rem;font-weight:700;letter-spacing:.3px}
+.poso-header-info span{font-size:.75rem;color:#aaa}
+.poso-close{
+  background:transparent;border:1px solid rgba(212,175,55,.4);color:#d4af37;
+  width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;transition:.2s;
+}
+.poso-close:hover{background:rgba(212,175,55,.15)}
+.poso-messages{
+  flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;
+  background:#0a0a0a;
+}
+.poso-messages::-webkit-scrollbar{width:6px}
+.poso-messages::-webkit-scrollbar-thumb{background:#d4af37;border-radius:3px}
+.poso-msg{max-width:88%;padding:10px 14px;border-radius:14px;font-size:.9rem;line-height:1.45;animation:poso-msg-in .25s ease}
+@keyframes poso-msg-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.poso-msg.bot{
+  align-self:flex-start;background:#1a1a1a;color:#eee;
+  border:1px solid rgba(212,175,55,.25);border-bottom-left-radius:4px;
+}
+.poso-msg.user{
+  align-self:flex-end;background:linear-gradient(135deg,#d4af37,#b8860b);color:#0d0d0d;
+  font-weight:600;border-bottom-right-radius:4px;
+}
+.poso-msg a{color:#d4af37;text-decoration:underline}
+.poso-msg.bot a{color:#f0d77b}
+.poso-typing{
+  align-self:flex-start;display:none;gap:5px;padding:12px 16px;
+  background:#1a1a1a;border-radius:14px;border:1px solid rgba(212,175,55,.25);
+}
+.poso-typing.show{display:flex}
+.poso-typing span{
+  width:7px;height:7px;border-radius:50%;background:#d4af37;
+  animation:poso-dot 1.2s infinite ease-in-out;
+}
+.poso-typing span:nth-child(2){animation-delay:.2s}
+.poso-typing span:nth-child(3){animation-delay:.4s}
+@keyframes poso-dot{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+.poso-quick{
+  display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px;background:#0a0a0a;
+}
+.poso-chip{
+  background:#1a1a1a;border:1px solid rgba(212,175,55,.4);color:#d4af37;
+  padding:6px 12px;border-radius:999px;font-size:.75rem;cursor:pointer;
+  transition:.2s;font-weight:600;
+}
+.poso-chip:hover{background:rgba(212,175,55,.15);border-color:#d4af37}
+.poso-input-row{
+  display:flex;gap:8px;padding:12px;border-top:1px solid rgba(212,175,55,.25);
+  background:#111;
+}
+.poso-input-row input{
+  flex:1;background:#1a1a1a;border:1px solid rgba(212,175,55,.35);
+  border-radius:12px;padding:11px 14px;color:#eee;font-size:.9rem;outline:none;
+}
+.poso-input-row input:focus{border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.2)}
+.poso-input-row input::placeholder{color:#777}
+.poso-send{
+  background:linear-gradient(135deg,#d4af37,#b8860b);border:none;border-radius:12px;
+  width:44px;color:#0d0d0d;cursor:pointer;font-weight:800;font-size:1.1rem;
+  transition:.2s;display:flex;align-items:center;justify-content:center;
+}
+.poso-send:hover{filter:brightness(1.1);transform:scale(1.04)}
+@media(max-width:480px){
+  .poso-window{bottom:90px;right:12px;left:12px;width:auto;height:min(480px,70vh)}
+  .poso-launcher{bottom:18px;right:18px;width:56px;height:56px}
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Easy Appliance Hub</div>
+            <ul class="nav-links">
+                <li><a href="#top-picks">Top Picks</a></li>
+                <li><a href="#categories">Appliances</a></li>
+                <li><a href="#compare">Compare</a></li>
+                <li><a href="#buying-guides">Guides</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary account-btn" id="openAccount">Account</button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#top-picks" class="mobile-link">Top Picks</a>
+            <a href="#categories" class="mobile-link">Appliances</a>
+            <a href="#compare" class="mobile-link">Compare</a>
+            <a href="#buying-guides" class="mobile-link">Buying Guides</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <a href="#about" class="mobile-link">About Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Make Your Home Smarter & Easier</h1>
+            <p>Discover useful appliances, smart home products, kitchen gadgets, and carefully selected Amazon finds—all in one place.</p>
+            <div class="btn-group">
+                <a href="#categories" class="btn btn-primary">Explore Appliances</a>
+                <a href="#top-picks" class="btn btn-secondary">See Top Picks</a>
+            </div>
+            <p class="hero-disclosure">As an Amazon Associate, we may earn from qualifying purchases.</p>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="categories" class="container">
+        <div class="section-header">
+            <h2>Find the Right Appliance for Your Home</h2>
+            <p>We've organized useful products into simple categories to help you find what you're looking for faster.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Kitchen Appliances</h3>
+                <p>Discover useful kitchen appliances designed to make cooking easier and faster.</p>
+                <a href="https://www.amazon.com/s?k=kitchen+appliances" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Kitchen</a>
+            </div>
+            <div class="card">
+                <h3>Cleaning Appliances</h3>
+                <p>Explore vacuum cleaners, robot cleaners, steam cleaners, and other home-cleaning solutions.</p>
+                <a href="https://www.amazon.com/s?k=robot+vacuum+cleaner" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Cleaning</a>
+            </div>
+            <div class="card">
+                <h3>Home Appliances</h3>
+                <p>Find practical appliances for comfort, convenience, and everyday living.</p>
+                <a href="https://www.amazon.com/s?k=home+appliances" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Home</a>
+            </div>
+            <div class="card">
+                <h3>Coffee & Beverage</h3>
+                <p>Discover coffee makers, kettles, blenders, and other beverage appliances.</p>
+                <a href="https://www.amazon.com/s?k=coffee+makers" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Coffee</a>
+            </div>
+            <div class="card">
+                <h3>Smart Home</h3>
+                <p>Explore smart plugs, smart devices, lighting, security products, and more.</p>
+                <a href="https://www.amazon.com/s?k=smart+home+devices" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Smart Home</a>
+            </div>
+            <div class="card">
+                <h3>Trending Finds</h3>
+                <p>See popular and interesting appliance finds worth checking out right now.</p>
+                <a href="https://www.amazon.com/gp/bestsellers/home-garden/289913" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px;">Shop Trending</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Picks -->
+    <section id="top-picks" class="container" style="padding:80px 40px;border-radius:24px;">
+        <div class="section-header">
+            <h2>Our Recommended Top Picks</h2>
+            <p>Carefully selected Amazon favorites based on ratings, features, and real user feedback.</p>
+        </div>
+
+        <div class="disclaimer-bar">
+            Prices shown are approximate and may change on Amazon. Always check the current price and availability before buying.
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="category-tabs">
+            <button class="cat-tab active" data-filter="all">All</button>
+            <button class="cat-tab" data-filter="kitchen">Kitchen</button>
+            <button class="cat-tab" data-filter="cleaning">Cleaning</button>
+            <button class="cat-tab" data-filter="smart">Smart Home</button>
+            <button class="cat-tab" data-filter="coffee">Coffee</button>
+        </div>
+
+        <div class="grid" id="productGrid">
+            <!-- Instant Pot -->
+            <div class="card product-card" data-category="kitchen">
+                <div class="product-img-wrap">
+                    <img src="images/instant-pot.jpg" alt="Instant Pot Duo 7-in-1" loading="lazy">
+                    <span class="product-initial" style="display:none">IP</span>
+                </div>
+                <h3>Instant Pot Duo 7-in-1 (6 Quart)</h3>
+                <p class="price">Approx. $109.99</p>
+                <p class="rating">4.6 / 5 &middot; 180,000+ reviews</p>
+                <p class="why">Why we recommend: One appliance that pressure cooks, slow cooks, steams, and more. Excellent value for busy households.</p>
+                <a href="https://www.amazon.com/dp/B00FLYWNYQ" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Ninja Air Fryer -->
+            <div class="card product-card" data-category="kitchen">
+                <div class="product-img-wrap">
+                    <img src="images/ninja-airfryer.jpg" alt="Ninja Air Fryer Pro" loading="lazy">
+                    <span class="product-initial" style="display:none">NA</span>
+                </div>
+                <h3>Ninja Air Fryer Pro (5 QT)</h3>
+                <p class="price">Approx. $89.99 – $139.99</p>
+                <p class="rating">4.7 / 5 &middot; 90,000+ reviews</p>
+                <p class="why">Why we recommend: Reliable Air Crisp technology, compact design, and strong everyday performance for fries, wings, and more.</p>
+                <a href="https://www.amazon.com/dp/B0CSZ7WBYW" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Cosori Air Fryer -->
+            <div class="card product-card" data-category="kitchen">
+                <div class="product-img-wrap">
+                    <img src="images/cosori-airfryer.jpg" alt="COSORI TurboBlaze Air Fryer" loading="lazy">
+                    <span class="product-initial" style="display:none">CO</span>
+                </div>
+                <h3>COSORI TurboBlaze Air Fryer 6 Qt</h3>
+                <p class="price">Approx. $89.99</p>
+                <p class="rating">4.8 / 5 &middot; 20,000+ reviews</p>
+                <p class="why">Why we recommend: High heat range, ceramic coating, and versatile 9-in-1 modes make it a strong mid-range pick.</p>
+                <a href="https://www.amazon.com/s?k=Cosori+TurboBlaze+Air+Fryer" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Roborock -->
+            <div class="card product-card" data-category="cleaning">
+                <div class="product-img-wrap">
+                    <img src="images/roborock.jpg" alt="roborock Q7 M5+" loading="lazy">
+                    <span class="product-initial" style="display:none">RQ</span>
+                </div>
+                <h3>roborock Q7 M5+ Robot Vacuum & Mop</h3>
+                <p class="price">Approx. $219.99 – $249.99</p>
+                <p class="rating">4.0 / 5 &middot; 20,000+ reviews</p>
+                <p class="why">Why we recommend: Strong suction, self-empty dock, and anti-tangle design work well for pet hair and everyday floors.</p>
+                <a href="https://www.amazon.com/dp/B0DWX69JVG" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Shark -->
+            <div class="card product-card" data-category="cleaning">
+                <div class="product-img-wrap">
+                    <img src="images/shark.jpg" alt="Shark AI Ultra Robot Vacuum" loading="lazy">
+                    <span class="product-initial" style="display:none">SH</span>
+                </div>
+                <h3>Shark AI Ultra Robot Vacuum</h3>
+                <p class="price">Approx. $249.99</p>
+                <p class="rating">4.2 / 5 &middot; 7,000+ reviews</p>
+                <p class="why">Why we recommend: Solid mapping, self-empty base, and good pet-hair performance at a competitive price point.</p>
+                <a href="https://www.amazon.com/s?k=Shark+AI+Ultra+Robot+Vacuum" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Amazon Smart Plug -->
+            <div class="card product-card" data-category="smart">
+                <div class="product-img-wrap">
+                    <img src="images/smart-plug.jpg" alt="Amazon Smart Plug" loading="lazy">
+                    <span class="product-initial" style="display:none">SP</span>
+                </div>
+                <h3>Amazon Smart Plug</h3>
+                <p class="price">Approx. $19.99 – $24.99</p>
+                <p class="rating">4.7 / 5 &middot; 570,000+ reviews</p>
+                <p class="why">Why we recommend: Simple setup with Alexa, reliable scheduling, and an easy way to make any outlet smart.</p>
+                <a href="https://www.amazon.com/dp/B01MZEEFNX" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Echo Dot -->
+            <div class="card product-card" data-category="smart">
+                <div class="product-img-wrap">
+                    <img src="images/echo-dot.jpg" alt="Amazon Echo Dot" loading="lazy">
+                    <span class="product-initial" style="display:none">ED</span>
+                </div>
+                <h3>Amazon Echo Dot (Latest Model)</h3>
+                <p class="price">Approx. $49.99 – $54.99</p>
+                <p class="rating">4.7 / 5 &middot; 180,000+ reviews</p>
+                <p class="why">Why we recommend: Compact smart speaker that controls devices, answers questions, and anchors an Alexa home setup.</p>
+                <a href="https://www.amazon.com/s?k=Amazon+Echo+Dot" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Keurig -->
+            <div class="card product-card" data-category="coffee">
+                <div class="product-img-wrap">
+                    <img src="images/keurig.jpg" alt="Keurig K-Express" loading="lazy">
+                    <span class="product-initial" style="display:none">KE</span>
+                </div>
+                <h3>Keurig K-Express Single Serve</h3>
+                <p class="price">Approx. $69.99</p>
+                <p class="rating">4.3 / 5 &middot; 50,000+ reviews</p>
+                <p class="why">Why we recommend: Fast single-serve brewing, Strong button option, and a practical reservoir for daily use.</p>
+                <a href="https://www.amazon.com/s?k=Keurig+K-Express" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+            <!-- Cosori Kettle -->
+            <div class="card product-card" data-category="coffee">
+                <div class="product-img-wrap">
+                    <img src="images/cosori-kettle.jpg" alt="COSORI Electric Kettle" loading="lazy">
+                    <span class="product-initial" style="display:none">CK</span>
+                </div>
+                <h3>COSORI Electric Kettle 1.7L</h3>
+                <p class="price">Approx. $25.99</p>
+                <p class="rating">4.5 / 5 &middot; 49,000+ reviews</p>
+                <p class="why">Why we recommend: Glass body, auto shut-off, and no plastic contact with water—solid everyday kettle value.</p>
+                <a href="https://www.amazon.com/s?k=Cosori+Electric+Kettle" class="btn btn-primary" target="_blank" rel="noopener noreferrer sponsored" style="width:100%;">Check Current Price on Amazon</a>
+                <p class="price-note">Price may vary. Click to see live Amazon price.</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="https://www.amazon.com/s?k=kitchen+appliances" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Browse More on Amazon</a>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section id="compare" class="container">
+        <div class="section-header">
+            <h2>Quick Comparison</h2>
+            <p>A simple side-by-side look at a few popular picks.</p>
+        </div>
+        <div class="card">
+            <div class="compare-table-wrap">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Approx. Price</th>
+                            <th>Rating</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instant Pot Duo 6 Qt</td>
+                            <td>Kitchen</td>
+                            <td>$109.99</td>
+                            <td>4.6 / 5</td>
+                            <td>One-pot meals, meal prep</td>
+                        </tr>
+                        <tr>
+                            <td>Ninja Air Fryer Pro</td>
+                            <td>Kitchen</td>
+                            <td>$90–$140</td>
+                            <td>4.7 / 5</td>
+                            <td>Crispy everyday cooking</td>
+                        </tr>
+                        <tr>
+                            <td>roborock Q7 M5+</td>
+                            <td>Cleaning</td>
+                            <td>$220–$250</td>
+                            <td>4.0 / 5</td>
+                            <td>Pet hair, hands-free cleaning</td>
+                        </tr>
+                        <tr>
+                            <td>Amazon Smart Plug</td>
+                            <td>Smart Home</td>
+                            <td>$20–$25</td>
+                            <td>4.7 / 5</td>
+                            <td>Voice control, schedules</td>
+                        </tr>
+                        <tr>
+                            <td>Keurig K-Express</td>
+                            <td>Coffee</td>
+                            <td>$69.99</td>
+                            <td>4.3 / 5</td>
+                            <td>Fast single-serve coffee</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="price-note" style="margin-top:16px;">Prices and availability change frequently on Amazon. Use the product links above for live details.</p>
+        </div>
+    </section>
+
+    <!-- How We Choose -->
+    <section id="how-we-choose" class="container">
+        <div class="section-header">
+            <h2>How We Choose Products</h2>
+            <p>We focus on practical value, not paid rankings.</p>
+        </div>
+        <div class="trust-grid">
+            <div class="card trust-item">
+                <div class="num">1</div>
+                <h4>Real Ratings</h4>
+                <p>We look at high review volume and consistent customer feedback, not just star averages.</p>
+            </div>
+            <div class="card trust-item">
+                <div class="num">2</div>
+                <h4>Useful Features</h4>
+                <p>We prioritize features that actually help daily life—capacity, ease of cleaning, reliability.</p>
+            </div>
+            <div class="card trust-item">
+                <div class="num">3</div>
+                <h4>Value Focus</h4>
+                <p>We highlight products that balance price and performance so you can decide with confidence.</p>
+            </div>
+            <div class="card trust-item">
+                <div class="num">4</div>
+                <h4>Transparent Links</h4>
+                <p>We may earn from qualifying Amazon purchases. This does not change the price you pay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buying Guides -->
+    <section id="buying-guides" class="container">
+        <div class="section-header">
+            <h2>Before You Buy, Know What Matters</h2>
+            <p>Choosing an appliance can be confusing. These guides help you focus on the features that matter.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h4>Best Appliances for Small Kitchens</h4>
+                <p>Discover space-saving products for apartments and smaller kitchens.</p>
+                <a href="https://www.amazon.com/s?k=small+kitchen+appliances" target="_blank" rel="noopener noreferrer">See Products on Amazon</a>
+            </div>
+            <div class="card">
+                <h4>Best Budget Appliances</h4>
+                <p>Explore products that offer useful features without unnecessary spending.</p>
+                <a href="https://www.amazon.com/s?k=budget+kitchen+appliances" target="_blank" rel="noopener noreferrer">See Products on Amazon</a>
+            </div>
+            <div class="card">
+                <h4>Best Appliances for Busy Homes</h4>
+                <p>Find products designed to save time and make everyday tasks easier.</p>
+                <a href="https://www.amazon.com/s?k=time+saving+kitchen+appliances" target="_blank" rel="noopener noreferrer">See Products on Amazon</a>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="https://www.amazon.com/gp/bestsellers/home-garden" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Amazon Best Sellers</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common questions about buying appliances.</p>
+        </div>
+        <div class="card" style="padding:10px 0;">
+            <div class="faq-item">
+                <button class="faq-q">Do prices on this site match Amazon? <span class="faq-icon">+</span></button>
+                <div class="faq-a">No. Prices shown are approximate. Amazon prices change often due to deals, stock, and seller updates. Always click through to Amazon for the current price.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">Are these affiliate links? <span class="faq-icon">+</span></button>
+                <div class="faq-a">Yes. Easy Appliance Hub participates in the Amazon Associates Program. If you buy through our links, we may earn a commission at no extra cost to you.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">How do you choose which products to list? <span class="faq-icon">+</span></button>
+                <div class="faq-a">We look at customer ratings, review volume, practical features, and overall value. We do not rank products based on paid placement.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">Can I return a product bought through your links? <span class="faq-icon">+</span></button>
+                <div class="faq-a">Returns are handled by Amazon under their standard return policy. Check the product page on Amazon for return eligibility and details.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">Is this site only for Amazon products? <span class="faq-icon">+</span></button>
+                <div class="faq-a">Right now we focus on Amazon because it has wide selection, clear pricing, and reliable shipping options for most customers.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pinterest Section -->
+    <section class="pinterest-section">
+        <div class="container">
+            <h2>Find Easy Appliance Ideas on Pinterest</h2>
+            <p>Follow Easy Appliance Hub on Pinterest for daily inspiration and useful product ideas.</p>
+            <ul class="pin-list">
+                <li>Kitchen appliance ideas</li>
+                <li>Home organization</li>
+                <li>Smart home gadgets</li>
+                <li>Cleaning products</li>
+                <li>Amazon finds</li>
+            </ul>
+            <a href="https://www.pinterest.com/smarthomefindscom/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Follow Us on Pinterest</a>
+        </div>
+    </section>
+
+    <!-- About & Newsletter -->
+    <section id="about" class="container">
+        <div class="split-section">
+            <div>
+                <h2>Why Easy Appliance Hub?</h2>
+                <p>Buying a new appliance can take time. There are hundreds of products, different features, different prices, and countless reviews to consider.</p>
+                <br>
+                <p>Easy Appliance Hub exists to make that process simpler. We research appliance categories, create helpful buying guides, and highlight products that may be worth considering.</p>
+                <br>
+                <ul style="list-style:square;padding-left:20px;color:var(--muted);">
+                    <li><strong>Easy to Understand:</strong> We explain products using simple language.</li>
+                    <li><strong>Helpful Guides:</strong> Learn what features to consider before buying.</li>
+                    <li><strong>Value Focused:</strong> We help you compare features and find products worth considering.</li>
+                </ul>
+            </div>
+            <div class="newsletter-box">
+                <h3>Get New Appliance Picks</h3>
+                <p>Want to discover useful appliances and smart-home products? Join our newsletter for recommendations and home ideas.</p>
+                <script async src="https://eocampaign1.com/form/26c90fcc-a20d-11f1-b34b-0d8778dd4b7d.js" data-form="26c90fcc-a20d-11f1-b34b-0d8778dd4b7d"></script>
+                <p style="font-size:0.8rem;margin-top:10px;color:#999;">You can unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Easy Appliance Hub</h3>
+                <p style="color:#8899a6;font-size:0.9rem;margin-top:10px;">Smart Appliance Picks. Better Buying Decisions.</p>
+            </div>
+            <div>
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#top-picks">Top Picks</a></li>
+                    <li><a href="#categories">Appliances</a></li>
+                    <li><a href="#compare">Compare</a></li>
+                    <li><a href="#buying-guides">Buying Guides</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#" id="openAbout">About Us</a></li>
+                    <li><a href="#" id="openContact">Contact</a></li>
+                    <li><a href="#" id="openPrivacy">Privacy Policy</a></li>
+                    <li><a href="#" id="openAffiliate">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="margin-bottom:10px;"><strong>Affiliate Disclosure:</strong> Easy Appliance Hub participates in affiliate marketing programs, including the Amazon Associates Program. As an Amazon Associate, we may earn commissions from qualifying purchases made through links on our website. This does not increase the price you pay.</p>
+            <p>&copy; 2026 Easy Appliance Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Account Modal -->
+    <div class="modal-backdrop" id="accountModal" aria-hidden="true">
+      <div class="account-modal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+        <button class="close-modal" id="closeAccount" aria-label="Close">&times;</button>
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="loginTab" type="button">Login</button>
+          <button class="auth-tab" id="signupTab" type="button">Sign Up</button>
+        </div>
+        <h2 id="accountTitle">Welcome Back</h2>
+        <p id="accountSubtitle">Login to your Easy Appliance Hub account.</p>
+        <form id="accountForm">
+          <div id="nameField" style="display:none">
+            <input id="accountName" type="text" placeholder="Full name" autocomplete="name">
+          </div>
+          <input id="accountEmail" type="email" placeholder="Email address" autocomplete="email" required>
+          <input id="accountPassword" type="password" placeholder="Password" autocomplete="current-password" minlength="6" required>
+          <button class="btn btn-primary modal-submit" type="submit" id="authSubmit">Login</button>
+        </form>
+        <p class="account-switch" id="accountSwitch">
+          New here? <a href="#" id="switchAuth">Create a new account</a>
+        </p>
+        <div class="auth-message" id="authMessage"></div>
+      </div>
+    </div>
+
+    <!-- Legal Page Modals -->
+    <div class="modal-backdrop" id="pageModal" aria-hidden="true">
+      <div class="page-modal" role="dialog" aria-modal="true">
+        <button class="close-modal" id="closePage" aria-label="Close">&times;</button>
+        <h2 id="pageTitle">Title</h2>
+        <div id="pageContent"></div>
+      </div>
+    </div>
+
+<script>
+(function(){
+  /* Account Modal */
+  const modal = document.getElementById('accountModal');
+  const open = document.getElementById('openAccount');
+  const close = document.getElementById('closeAccount');
+  const form = document.getElementById('accountForm');
+  const title = document.getElementById('accountTitle');
+  const subtitle = document.getElementById('accountSubtitle');
+  const submit = document.getElementById('authSubmit');
+  const nameField = document.getElementById('nameField');
+  const nameInput = document.getElementById('accountName');
+  const switchAuth = document.getElementById('switchAuth');
+  const switchText = document.getElementById('accountSwitch');
+  const message = document.getElementById('authMessage');
+  const loginTab = document.getElementById('loginTab');
+  const signupTab = document.getElementById('signupTab');
+  let signupMode = false;
+
+  function setMode(isSignup){
+    signupMode = isSignup;
+    title.textContent = isSignup ? 'Create Your Account' : 'Welcome Back';
+    subtitle.textContent = isSignup
+      ? 'Register for an Easy Appliance Hub account.'
+      : 'Login to your Easy Appliance Hub account.';
+    submit.textContent = isSignup ? 'Create Account' : 'Login';
+    nameField.style.display = isSignup ? 'block' : 'none';
+    nameInput.required = isSignup;
+    switchText.innerHTML = isSignup
+      ? 'Already registered? <a href="#" id="switchAuth">Login instead</a>'
+      : 'New here? <a href="#" id="switchAuth">Create a new account</a>';
+    loginTab.classList.toggle('active', !isSignup);
+    signupTab.classList.toggle('active', isSignup);
+    message.textContent = '';
+    document.getElementById('switchAuth').onclick = function(e){
+      e.preventDefault();
+      setMode(!signupMode);
+    };
+  }
+  function show(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); message.textContent=''; document.getElementById('accountEmail').focus(); }
+  function hide(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+  open.addEventListener('click', show);
+  close.addEventListener('click', hide);
+  modal.addEventListener('click', e => { if(e.target === modal) hide(); });
+  loginTab.addEventListener('click', () => setMode(false));
+  signupTab.addEventListener('click', () => setMode(true));
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = document.getElementById('accountEmail').value.trim().toLowerCase();
+    const password = document.getElementById('accountPassword').value;
+    const name = nameInput.value.trim();
+    if(signupMode){
+      if(!name){ message.textContent = 'Please enter your name.'; return; }
+      localStorage.setItem('easyApplianceAccount', JSON.stringify({ name, email, password }));
+      message.textContent = 'Account created successfully! You can now use the website.';
+      setTimeout(() => setMode(false), 900);
+    } else {
+      const saved = JSON.parse(localStorage.getItem('easyApplianceAccount') || 'null');
+      if(saved && saved.email === email && saved.password === password){
+        message.textContent = 'Login successful. Welcome back, ' + (saved.name || 'friend') + '!';
+      } else if(saved && saved.email === email){
+        message.textContent = 'Incorrect password.';
+      } else {
+        message.textContent = 'Account not found. Please use Sign Up to register.';
+      }
+    }
+  });
+  setMode(false);
+
+  /* Mobile Menu */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  /* Category Filter */
+  const tabs = document.querySelectorAll('.cat-tab');
+  const products = document.querySelectorAll('.product-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.getAttribute('data-filter');
+      products.forEach(p => {
+        if(filter === 'all' || p.getAttribute('data-category') === filter){
+          p.classList.remove('hidden');
+        } else {
+          p.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  /* FAQ Accordion */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  /* Legal Page Modals */
+  const pageModal = document.getElementById('pageModal');
+  const pageTitle = document.getElementById('pageTitle');
+  const pageContent = document.getElementById('pageContent');
+  const closePage = document.getElementById('closePage');
+  const pages = {
+    about: {
+      title: 'About Us',
+      content: '<p>Easy Appliance Hub helps people find practical appliances and smart home products without the confusion of endless options.</p><p>We research categories, highlight highly rated products, and explain key features in plain language so you can make better buying decisions.</p><p>Our goal is simple: useful recommendations, clear guides, and transparent affiliate relationships.</p>'
+    },
+    contact: {
+      title: 'Contact',
+      content: '<p>Have a question or suggestion? We would love to hear from you.</p><p>For general inquiries, product feedback, or partnership questions, please reach out through our newsletter form or social channels.</p><p>We aim to respond as soon as possible.</p>'
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      content: '<p>We respect your privacy. This site may use local storage for account features and basic analytics to improve the experience.</p><p>If you join our newsletter, your email is handled by our email provider according to their privacy practices. You can unsubscribe at any time.</p><p>We do not sell your personal information. Third-party services (such as Amazon links) have their own privacy policies.</p>'
+    },
+    affiliate: {
+      title: 'Affiliate Disclosure',
+      content: '<p>Easy Appliance Hub participates in the Amazon Associates Program and other affiliate programs.</p><p>When you click a product link and make a qualifying purchase, we may earn a commission. This does not increase the price you pay.</p><p>We only recommend products we believe may be useful based on ratings, features, and value. Affiliate relationships do not influence our basic selection criteria.</p>'
+    }
+  };
+  function openPage(key){
+    pageTitle.textContent = pages[key].title;
+    pageContent.innerHTML = pages[key].content;
+    pageModal.classList.add('open');
+    pageModal.setAttribute('aria-hidden','false');
+  }
+  function hidePage(){
+    pageModal.classList.remove('open');
+    pageModal.setAttribute('aria-hidden','true');
+  }
+  document.getElementById('openAbout').addEventListener('click', e => { e.preventDefault(); openPage('about'); });
+  document.getElementById('openContact').addEventListener('click', e => { e.preventDefault(); openPage('contact'); });
+  document.getElementById('openPrivacy').addEventListener('click', e => { e.preventDefault(); openPage('privacy'); });
+  document.getElementById('openAffiliate').addEventListener('click', e => { e.preventDefault(); openPage('affiliate'); });
+  closePage.addEventListener('click', hidePage);
+  pageModal.addEventListener('click', e => { if(e.target === pageModal) hidePage(); });
+})();
+</script>
+
+
+<!-- POSO Chatbot -->
+<button class="poso-launcher" id="posoLauncher" aria-label="Open Poso chatbot" title="Chat with Poso">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.1 1 4.1 2.6 5.6L3 21l4.7-1.4c1.3.5 2.7.7 4.3.7 5.5 0 10-3.6 10-8S17.5 3 12 3zm0 14.5c-1.4 0-2.7-.3-3.9-.8l-.3-.1-2.3.7.7-2.1-.2-.3C5.1 13.7 4.5 12.4 4.5 11c0-3.3 3.4-6 7.5-6s7.5 2.7 7.5 6-3.4 6-7.5 6z"/></svg>
+  <span class="poso-badge">1</span>
+</button>
+<div class="poso-window" id="posoWindow" role="dialog" aria-label="Poso chatbot">
+  <div class="poso-header">
+    <div class="poso-avatar">P</div>
+    <div class="poso-header-info">
+      <h4>Poso</h4>
+      <span>Online · Easy Appliance Hub</span>
+    </div>
+    <button class="poso-close" id="posoClose" aria-label="Close chat">×</button>
+  </div>
+  <div class="poso-messages" id="posoMessages">
+    <div class="poso-msg bot">Hi, I’m <strong>Poso</strong> — your guide at Easy Appliance Hub. Ask me about products, prices, categories, or how we choose recommendations.</div>
+  </div>
+  <div class="poso-typing" id="posoTyping"><span></span><span></span><span></span></div>
+  <div class="poso-quick" id="posoQuick">
+    <button type="button" class="poso-chip" data-q="What products do you recommend?">Top picks</button>
+    <button type="button" class="poso-chip" data-q="Tell me about Instant Pot">Instant Pot</button>
+    <button type="button" class="poso-chip" data-q="Best air fryer?">Air fryers</button>
+    <button type="button" class="poso-chip" data-q="How do affiliate links work?">Affiliate info</button>
+  </div>
+  <div class="poso-input-row">
+    <input type="text" id="posoInput" placeholder="Ask Poso anything..." autocomplete="off" maxlength="400">
+    <button type="button" class="poso-send" id="posoSend" aria-label="Send">➤</button>
+  </div>
+</div>
+
+<script>
+/* ========== POSO CHATBOT LOGIC ========== */
+(function(){
+  const launcher = document.getElementById('posoLauncher');
+  const win = document.getElementById('posoWindow');
+  const closeBtn = document.getElementById('posoClose');
+  const messages = document.getElementById('posoMessages');
+  const typing = document.getElementById('posoTyping');
+  const input = document.getElementById('posoInput');
+  const sendBtn = document.getElementById('posoSend');
+  const quick = document.getElementById('posoQuick');
+  const badge = launcher.querySelector('.poso-badge');
+
+  const knowledge = [
+    {
+      keys: ['hello','hi','hey','good morning','good evening','salam','assalam'],
+      reply: 'Hello! I’m Poso. I can help with product recommendations, categories (Kitchen, Cleaning, Smart Home, Coffee), prices, and how this site works. What would you like to know?'
+    },
+    {
+      keys: ['top pick','recommend','best product','what should i buy','suggestion'],
+      reply: 'Our current top picks include:\n• Instant Pot Duo 7-in-1 — great for one-pot meals\n• Ninja Air Fryer Pro — crispy results with less oil\n• COSORI TurboBlaze Air Fryer — strong mid-range option\n• roborock Q7 M5+ — robot vacuum & mop with self-empty\n• Amazon Smart Plug & Echo Dot — easy smart-home starters\n\nScroll to Top Picks or tell me your category (kitchen, cleaning, smart home, coffee).'
+    },
+    {
+      keys: ['instant pot','pressure cooker','multi cooker','duo'],
+      reply: 'Instant Pot Duo 7-in-1 (6 Quart) is one of our strongest kitchen picks. It pressure cooks, slow cooks, steams, sautés, makes rice & yogurt, and keeps food warm. Approx. $109.99 · 4.6/5 from 180,000+ reviews. Use the “Check Current Price on Amazon” button on its card for the live price.'
+    },
+    {
+      keys: ['ninja','air fryer pro','af141'],
+      reply: 'Ninja Air Fryer Pro (5 QT) uses Air Crisp technology for crispy results with little oil. Good for fries, wings, and everyday cooking. Approx. $89–$140 · around 4.7/5. Click its Amazon button on the site for the current price.'
+    },
+    {
+      keys: ['cosori','turboblaze'],
+      reply: 'COSORI TurboBlaze Air Fryer 6 Qt is a versatile 9-in-1 style air fryer with high heat range and ceramic coating. Approx. $89.99 · strong ratings. COSORI also has a solid 1.7L electric kettle (~$26) with no plastic contact with water.'
+    },
+    {
+      keys: ['roborock','robot vacuum','q7','mop'],
+      reply: 'roborock Q7 M5+ is a robot vacuum & mop with self-empty dock and anti-tangle design — solid for pet hair and hands-free cleaning. Approx. $220–$250. Check the product card for the live Amazon link.'
+    },
+    {
+      keys: ['shark','ai ultra'],
+      reply: 'Shark AI Ultra Robot Vacuum offers mapping, self-empty base, and good pet-hair performance at a competitive price (around $250). See the Cleaning section on the site for the Amazon button.'
+    },
+    {
+      keys: ['smart plug','echo','alexa','smart home','dot'],
+      reply: 'For Smart Home we highlight:\n• Amazon Smart Plug (~$20–$25) — simple Alexa control & schedules\n• Amazon Echo Dot (latest) (~$50–$55) — compact speaker + smart-home hub\nBoth have excellent review counts. Use the Smart Home filter tab above the products.'
+    },
+    {
+      keys: ['keurig','coffee','kettle'],
+      reply: 'Coffee picks:\n• Keurig K-Express Single Serve (~$70) — fast single-serve with Strong button\n• COSORI Electric Kettle 1.7L (~$26) — glass/steel, auto shut-off\nFilter by Coffee on the product tabs to see them quickly.'
+    },
+    {
+      keys: ['price','cost','how much','cheap','budget'],
+      reply: 'Prices on this site are approximate and change on Amazon. Always click “Check Current Price on Amazon” on any product card for the live price and availability. Budget-friendly options include the Smart Plug (~$20) and COSORI kettle (~$26).'
+    },
+    {
+      keys: ['affiliate','commission','earn','disclosure','link'],
+      reply: 'Easy Appliance Hub is an Amazon Associate. If you buy through our product links, we may earn a commission at no extra cost to you. This does not change the price you pay. See the Affiliate Disclosure in the footer for full details.'
+    },
+    {
+      keys: ['how you choose','why recommend','trust','review'],
+      reply: 'We focus on products with strong ratings, useful features, and solid value. Star ratings and review counts are shown on each card, plus a short “Why we recommend” note. Always verify current price and reviews on Amazon before buying.'
+    },
+    {
+      keys: ['category','filter','kitchen','cleaning','tab'],
+      reply: 'Use the tabs above the product grid: All · Kitchen · Cleaning · Smart Home · Coffee. They filter the cards instantly so you only see what you need.'
+    },
+    {
+      keys: ['compare','comparison','table'],
+      reply: 'There’s a Quick Comparison table lower on the page that compares Instant Pot, Ninja Air Fryer, roborock, Smart Plug, and Keurig side by side (category, approx. price, rating, best for).'
+    },
+    {
+      keys: ['faq','question','help','support','contact'],
+      reply: 'You’ll find an FAQ section on the page covering common buying questions. For contact info, use the Contact link in the footer (opens a simple page modal). I’m also here for product questions anytime.'
+    },
+    {
+      keys: ['account','login','sign'],
+      reply: 'The Account button is in the top-right of the navigation. It is a simple site feature — product recommendations work without an account. For purchases you complete checkout on Amazon.'
+    },
+    {
+      keys: ['thank','thanks','shukriya','great'],
+      reply: 'You’re welcome! If you need anything else about appliances or the site, just ask Poso.'
+    },
+    {
+      keys: ['who are you','your name','poso'],
+      reply: 'I’m Poso — the official assistant for Easy Appliance Hub. I help visitors find appliance recommendations, understand ratings, and navigate the site. How can I help you today?'
+    },
+    {
+      keys: ['bye','goodbye','see you'],
+      reply: 'Goodbye! Come back anytime you need appliance advice. Happy shopping.'
+    }
+  ];
+
+  const fallback = 'I can help with Instant Pot, air fryers (Ninja, COSORI), robot vacuums (roborock, Shark), smart plugs, Echo Dot, Keurig, kettles, prices, affiliate info, and site features. Try asking about a product name or “top picks”.';
+
+  function addMsg(text, who){
+    const div = document.createElement('div');
+    div.className = 'poso-msg ' + who;
+    div.innerHTML = text.replace(/\n/g, '<br>');
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function findReply(q){
+    const lower = q.toLowerCase();
+    for (const item of knowledge){
+      if (item.keys.some(k => lower.includes(k))) return item.reply;
+    }
+    return fallback;
+  }
+
+  function botReply(q){
+    typing.classList.add('show');
+    messages.scrollTop = messages.scrollHeight;
+    const delay = 600 + Math.min(1200, q.length * 20);
+    setTimeout(() => {
+      typing.classList.remove('show');
+      addMsg(findReply(q), 'bot');
+    }, delay);
+  }
+
+  function send(){
+    const q = (input.value || '').trim();
+    if (!q) return;
+    addMsg(q, 'user');
+    input.value = '';
+    botReply(q);
+  }
+
+  launcher.addEventListener('click', () => {
+    win.classList.add('open');
+    badge.style.display = 'none';
+    input.focus();
+  });
+  closeBtn.addEventListener('click', () => win.classList.remove('open'));
+  sendBtn.addEventListener('click', send);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+  quick.addEventListener('click', e => {
+    const chip = e.target.closest('.poso-chip');
+    if (!chip) return;
+    const q = chip.getAttribute('data-q');
+    addMsg(q, 'user');
+    botReply(q);
+  });
+})();
+</script>
+
+</body>
+</html>
