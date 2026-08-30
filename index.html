@@ -1826,7 +1826,29 @@ footer a{color:#cbbbe0}
   sync();
 })();
 </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD91heKo9AZpm7XAEwjbNh1IitVpl2MZVQ",
+    authDomain: "easy-appliance-hub.firebaseapp.com",
+    projectId: "easy-appliance-hub",
+    storageBucket: "easy-appliance-hub.firebasestorage.app",
+    messagingSenderId: "808007613848",
+    appId: "1:808007613848:web:ad37018d77ea30dc207fed",
+    measurementId: "G-4N5Y3ZKX66"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
 
